@@ -177,4 +177,8 @@ public class PreventRunning implements PreventRunningHook {
         return mPreventRunning == null || mPreventRunning.hookStartService(service);
     }
 
+    public boolean isActiviated() {
+        return mPreventRunning != null;
+    }
+
 }

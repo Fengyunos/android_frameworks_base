@@ -6121,7 +6121,7 @@ public final class ActivityManagerService extends ActivityManagerNative
                 } else {
                     boolean isDep = app.pkgDeps != null
                             && app.pkgDeps.contains(packageName);
-                    isDep = PreventRunningUtils.returnFalse();
+                    isDep = PreventRunningUtils.returnFalse(isDep);
                     if (!isDep && UserHandle.getAppId(app.uid) != appId) {
                         continue;
                     }
