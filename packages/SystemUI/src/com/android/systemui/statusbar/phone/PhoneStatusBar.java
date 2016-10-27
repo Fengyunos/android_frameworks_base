@@ -201,6 +201,7 @@ import com.android.systemui.statusbar.policy.KeyguardUserSwitcher;
 import com.android.systemui.statusbar.policy.LocationControllerImpl;
 import com.android.systemui.statusbar.policy.NetworkController;
 import com.android.systemui.statusbar.policy.NetworkControllerImpl;
+import com.android.systemui.statusbar.policy.NetworkTraffic;
 import com.android.systemui.statusbar.policy.NextAlarmController;
 import com.android.systemui.statusbar.policy.OnHeadsUpChangedListener;
 import com.android.systemui.statusbar.policy.PreviewInflater;
@@ -437,6 +438,9 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
     private View mReportRejectedTouch;
 
     int mMaxAllowedKeyguardNotifications;
+
+    // Status bar Network traffic;
+    private NetworkTraffic mNetworkTraffic;
 
     // carrier label
     private TextView mCarrierLabel;
@@ -1010,6 +1014,8 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         // figure out which pixel-format to use for the status bar.
         mPixelFormat = PixelFormat.OPAQUE;
         mStatusBarContents = (LinearLayout)mStatusBarView.findViewById(R.id.status_bar_contents);
+
+        mNetworkTraffic = (NetworkTraffic)mStatusBarView.findViewById(R.id.network_traffic);
 
         mStackScroller = (NotificationStackScrollLayout) mStatusBarWindow.findViewById(
                 R.id.notification_stack_scroller);
@@ -4168,6 +4174,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         if (MULTIUSER_DEBUG) mNotificationPanelDebugText.setText("USER " + newUserId);
         resetNavBarObserver();
         animateCollapsePanels();
+        mNetworkTraffic.updateSettings();
         updatePublicMode();
         updateNotifications();
         resetUserSetupObserver();
