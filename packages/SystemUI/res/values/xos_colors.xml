@@ -26,4 +26,7 @@
     <!-- Custom Carrier Label -->
     <color name="status_bar_carrier_color">#FFFFFFFF</color>
 
+    <!-- Floating action button -->
+    <color name="fab_color">#ffffffff</color>
+    <color name="floating_action_button_icon_color">@*android:color/accent_material_dark</color>
 </resources>
