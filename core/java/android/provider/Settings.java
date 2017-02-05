@@ -3582,6 +3582,12 @@ public final class Settings {
         public static final String STATUS_BAR_NETWORK_TRAFFIC_STYLE = "status_bar_network_traffic_style";
 
         /**
+         * Option to hide AM/PM sufix
+         * @hide
+         */
+        public static final String DISABLE_STK_DIALOG_AUTO_OPEN = "disable_stk_dialog_auto_open";
+
+        /**
          * I am the lolrus.
          * <p>
          * Nonzero values indicate that the user has a bukkit.
