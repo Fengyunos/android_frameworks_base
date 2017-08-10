@@ -3599,7 +3599,6 @@ public final class Settings {
          */
         public static final String  RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
 
-
         /**
          * Clean recent by shake
          *
