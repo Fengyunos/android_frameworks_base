@@ -3582,12 +3582,6 @@ public final class Settings {
         public static final String STATUS_BAR_NETWORK_TRAFFIC_STYLE = "status_bar_network_traffic_style";
 
         /**
-         * Option to hide AM/PM sufix
-         * @hide
-         */
-        public static final String DISABLE_STK_DIALOG_AUTO_OPEN = "disable_stk_dialog_auto_open";
-
-        /**
          * show clear all recents button
          *  @hide
          */
@@ -3605,6 +3599,12 @@ public final class Settings {
          * @hide
          */
         public static final String SHAKE_CLEAN_RECENT = "shake_clean_recent";
+
+          /**
+         * Clean notification by shake
+         * @hide
+         */
+        public static final String SHAKE_CLEAN_NOTIFICATION = "shake_clean_notification";
 
         /**
          * I am the lolrus.
